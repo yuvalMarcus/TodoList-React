@@ -13,7 +13,7 @@ class App extends Component {
   render() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/react/todolist/">
             <Layout>
                 <Switch>
                     <Route path="/edit-todo/:id" component={EditTodo} />

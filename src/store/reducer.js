@@ -76,7 +76,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 filter: {
                     ...state.filter,
-                    [action.filter]: action.orderBy
+                    [action.filter]: action.value
                 }
             };
         default:
