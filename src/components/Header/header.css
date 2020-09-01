@@ -1,0 +1,35 @@
+header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: rgba(52, 58, 64, 0.75)!important;
+    -moz-box-shadow: 3px -3px 15px 0px #333;
+    -webkit-box-shadow: 3px -3px 15px 0px #333;
+    box-shadow: 3px -3px 15px 0px #333;
+    color: #fff;
+}
+
+header button {
+    background-color: #8BC34A;
+    border: 1px solid #2a2e2f;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+    text-align: left;
+    font-weight: 600;
+    font-family: 'Dosis', sans-serif;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
