@@ -11,8 +11,8 @@
 .Modal .ModalPopup {
     position: relative;
     background-color: #f1f1f1;
-    max-width: 600px;
-    margin: auto;
+    max-width: 620px;
+    margin: auto 20px;
     margin-top: 10%;
     border: 5px solid #fff;
     padding: 10px;

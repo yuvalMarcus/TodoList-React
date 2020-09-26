@@ -14,7 +14,7 @@ const elements = [
             options: [
                 {value: '0', displayValue: 'ID'},
                 {value: '1', displayValue: 'Time'},
-                {value: '2', displayValue: 'Urgency'},
+                {value: '2', displayValue: 'Immediacy'},
                 {value: '3', displayValue: 'Date'}
             ]
         }

@@ -7,13 +7,21 @@
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
 }
-
 .FlexContainer {
     display: flex;
     flex-wrap: wrap;
 }
-
 .FilterControl .FlexContainer > div {
     width: 33%;
     text-align: center;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+    .FilterControl .FlexContainer > div {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
 }

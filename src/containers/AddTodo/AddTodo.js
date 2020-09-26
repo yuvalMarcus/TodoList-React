@@ -1,71 +1,13 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { handleValidation } from '../../handlers/utility';
+import { elements, handleValidation } from '../../handlers/utility';
 import './AddTodo.css';
 
 import * as actionTypes from '../../store/actions';
 
 import Auxiliary from '../../hoc/Auxiliary';
-import Header from '../../components/Header/Header';
 import Input from '../../components/UI/Input/Input';
 import ErrorMessage from '../../components/UI/ErrorMessage/ErrorMessage';
-
-const elements = [
-    {
-        elementType: 'input',
-        elementLabel: 'Name',
-        elementConfig: {
-            type: 'text',
-            placeholder: 'Name',
-            name: 'name',
-        },
-        validation: {
-            required: true,
-            maxLength: 15
-        }
-    },
-    {
-        elementType: 'input',
-        elementLabel: 'Time',
-        elementConfig: {
-            type: 'number',
-            placeholder: 'Time In Minutes',
-            name: 'time',
-        },
-        validation: {
-            required: true,
-            maxLength: 4
-        }
-    },
-    {
-        elementType: 'select',
-        elementLabel: 'Urgency',
-        elementConfig: {
-            options: [
-                {value: 0, displayValue: 'low'},
-                {value: 1, displayValue: 'regular'},
-                {value: 2, displayValue: 'high'}
-            ],
-            name: 'urgency'
-        },
-        validation: {
-            required: true
-        }
-    },
-    {
-        elementType: 'textarea',
-        elementLabel: 'Description',
-        elementConfig: {
-            type: 'text',
-            placeholder: '',
-            name: 'description',
-        },
-        validation: {
-            required: false,
-            maxLength: 60
-        }
-    }
-]
 
 class AddTodo extends Component {
 
@@ -81,7 +23,7 @@ class AddTodo extends Component {
                 valid: false,
                 clicked: false
             },
-            urgency: {
+            immediacy: {
                 value: '0',
                 valid: true,
                 clicked: false
@@ -113,7 +55,7 @@ class AddTodo extends Component {
             const item = {
                 name: this.state.elements.name.value,
                 time: this.state.elements.time.value,
-                urgency: parseInt(this.state.elements.urgency.value),
+                immediacy: parseInt(this.state.elements.immediacy.value),
                 description: this.state.elements.description.value,
                 check: false
             };
@@ -134,8 +76,8 @@ class AddTodo extends Component {
                     ...this.state.elements.time,
                     clicked: true
                 },
-                urgency: {
-                    ...this.state.elements.urgency,
+                immediacy: {
+                    ...this.state.elements.immediacy,
                     clicked: true
                 },
                 description: {
@@ -197,7 +139,6 @@ class AddTodo extends Component {
 
         return (
             <Auxiliary>
-                <Header />
                 <div className={'addTodoPage'}>
                     <form className={'form'} onSubmit={this.handleSubmit}>
                         {formElements}

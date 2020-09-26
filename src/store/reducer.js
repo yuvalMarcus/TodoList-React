@@ -2,11 +2,11 @@ import * as actionTypes from './actions';
 
 const initialState = {
     items: [
-        {ID: 1, name: "name", time: 15, urgency: 0, description: "description", check: false},
-        {ID: 2, name: "name2", time: 60, urgency: 1, description: "description", check: true},
-        {ID: 3, name: "name3", time: 30, urgency: 2, description: "description", check: true},
-        {ID: 4, name: "name4", time: 30, urgency: 1, description: "description", check: false},
-        {ID: 5, name: "name5", time: 10, urgency: 0, description: "description", check: false}
+        {ID: 1, name: "name", time: 15, immediacy: 0, description: "description", check: false},
+        {ID: 2, name: "name2", time: 60, immediacy: 1, description: "description", check: true},
+        {ID: 3, name: "name3", time: 30, immediacy: 2, description: "description", check: true},
+        {ID: 4, name: "name4", time: 30, immediacy: 1, description: "description", check: false},
+        {ID: 5, name: "name5", time: 10, immediacy: 0, description: "description", check: false}
     ],
     lastID: 5,
     filter: {
@@ -57,7 +57,7 @@ const reducer = (state = initialState, action) => {
                 ...list[index],
                 name: action.payload.name,
                 time: action.payload.time,
-                urgency: action.payload.urgency,
+                immediacy: action.payload.immediacy,
                 description: action.payload.description
             };
 
@@ -69,7 +69,7 @@ const reducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                items: state.items.filter((item, index) => index !== index)
+                items: state.items.filter(item => item.ID !== action.id)
             };
         case (actionTypes.UPDATE_FILTER):
             return {

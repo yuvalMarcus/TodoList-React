@@ -4,7 +4,7 @@ import './ErrorMessage.css';
 const ErrorMessage = props => {
 
     return (
-        <p className="messegeNotValid">
+        <p className={'MessegeNotValid'}>
             {props.children}
         </p>
     )

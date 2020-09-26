@@ -44,7 +44,7 @@ class List extends Component {
                 break;
             case 2:
                 items = items.sort((a, b) => {
-                    return b.urgency-a.urgency;
+                    return b.immediacy-a.immediacy;
                 });
                 break;
             case 3:
@@ -78,7 +78,7 @@ class List extends Component {
                             ID={item.ID}
                             name={item.name}
                             time={item.time}
-                            urgency={item.urgency}
+                            immediacy={item.immediacy}
                             check={item.check}
                             checkHandler={() => this.props.onCheckTodoItem(item.ID)}
                             descriptionHandler={() => this.modalShow(item.ID)}

@@ -4,20 +4,20 @@ import './Item.css';
 
 const Item = (props) => {
 
-    let urgency = null;
+    let immediacy = null;
 
-    switch (props.urgency) {
+    switch (props.immediacy) {
         case 0:
-            urgency = "low";
+            immediacy = "low";
             break;
         case 1:
-            urgency = "regular";
+            immediacy = "regular";
             break;
         case 2:
-            urgency = "high";
+            immediacy = "high";
             break;
         default:
-            urgency = null;
+            immediacy = null;
             break;
     }
 
@@ -26,11 +26,11 @@ const Item = (props) => {
     const checkIcon = props.check ? "fa fa-check-square-o" : "fa fa-square-o" ;
 
         return (
-        <li className={'TodoItem ' + urgency}>
+        <li className={'TodoItem ' + immediacy}>
             <h2>{props.ID}</h2>
             <h3>{props.name}</h3>
             <p>
-                Time : {props.time} Minutes | Urgency : <span className={urgency}>{urgency}</span> | {checkCoverText}
+                Time : {props.time} Minutes | Immediacy : <span className={immediacy}>{immediacy}</span> | {checkCoverText}
             </p>
             <button onClick={props.descriptionHandler}>Read More</button>
             <button onClick={props.checkHandler}>{checkButtonText}</button>

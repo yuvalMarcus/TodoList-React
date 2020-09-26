@@ -10,7 +10,6 @@ header {
     box-shadow: 3px -3px 15px 0px #333;
     color: #fff;
 }
-
 header button {
     background-color: #8BC34A;
     border: 1px solid #2a2e2f;
@@ -18,8 +17,7 @@ header button {
     padding: 10px;
     font-weight: 600;
 }
-
-.logo {
+.Logo {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
@@ -28,8 +26,7 @@ header button {
     font-weight: 600;
     font-family: 'Dosis', sans-serif;
 }
-
-.logo a {
+.Logo a {
     color: #fff;
     text-decoration: none;
 }

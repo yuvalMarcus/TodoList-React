@@ -9,3 +9,6 @@
     background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     z-index: -1;
 }
+main.Main {
+    padding: 0px 20px;
+}

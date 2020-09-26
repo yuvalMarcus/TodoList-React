@@ -128,7 +128,6 @@
     background: -webkit-linear-gradient(to right, #ffc500, #c21500);
     background: linear-gradient(to right, #ffc500, #c21500);
 }
-
 .TodoItem .BackgroundCheck {
     opacity: 0.3;
     position: absolute;
@@ -148,8 +147,26 @@
     -ms-flex-pack: end;
     justify-content: flex-end;
 }
-
 i.fa.fa-check-square-o, i.fa.fa-square-o {
     position: relative;
     top: 5px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+    .TodoItem button, .TodoItem a {
+        transform: translateY(0px);
+        opacity: 1;
+        padding: 5px 5px;
+    }
+    .TodoItem .BackgroundCheck {
+        display: none;
+    }
+    .TodoItem a {
+        top: 9px;
+    }
+    .TodoItem:after {
+        width: 80%;
+    }
 }

@@ -8,7 +8,7 @@ const Header = props => {
 
     return (
         <header>
-            <div className={'logo'}>
+            <div className={'Logo'}>
                 <Link to="/">
                     <i className="fa fa-list-ol" aria-hidden="true"></i>&nbsp;&nbsp;Todo List
                 </Link>
